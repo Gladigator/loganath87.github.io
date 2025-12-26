@@ -28,7 +28,7 @@ From the scan results, I noticed:
 
 Seeing **Tomcat on port 8080** immediately caught my attention because Tomcat is often misconfigured in labs.
 
-![Nmap Scan Results](/assets/img/posts/thompson/nmap-scan.png)
+![Nmap Scan Results](/assets/img/posts/thompson/nmap-scan.jpg)
 _Nmap scan showing open ports_
 
 ---
@@ -47,7 +47,7 @@ This confirmed:
 - ✅ The default page is exposed
 - ✅ The server might not be hardened properly
 
-![Tomcat Homepage](/assets/img/posts/thompson/tomcat-homepage.png)
+![Tomcat Homepage](/assets/img/posts/thompson/tomcat-homepage.jpg)
 _Apache Tomcat default page_
 
 ---
@@ -67,7 +67,7 @@ Gobuster revealed some interesting paths:
 
 The **/manager** path is very important in Tomcat labs.
 
-![Gobuster Results](/assets/img/posts/thompson/gobuster-scan.png)
+![Gobuster Results](/assets/img/posts/thompson/gobuster-scan.jpg)
 _Gobuster discovering Tomcat directories_
 
 ---
@@ -96,7 +96,7 @@ This was an **information leak**.
 
 By carefully observing this response, I was able to identify valid manager credentials.
 
-![401 Unauthorized Page](/assets/img/posts/thompson/401-unauthorized.png)
+![401 Unauthorized Page](/assets/img/posts/thompson/401-unauthorized.jpg)
 _Information disclosure in error page_
 
 ---
@@ -115,7 +115,7 @@ Once inside, I could see:
 
 This is usually **game over** for Tomcat boxes 😄
 
-![Tomcat Manager Dashboard](/assets/img/posts/thompson/manager-dashboard.png)
+![Tomcat Manager Dashboard](/assets/img/posts/thompson/manager-dashboard.jpg)
 _Inside the Tomcat Manager interface_
 
 ---
@@ -138,7 +138,7 @@ Then I started a **listener**:
 nc -lvnp 4433
 ```
 
-![Msfvenom Payload Creation](/assets/img/posts/thompson/msfvenom-payload.png)
+![Msfvenom Payload Creation](/assets/img/posts/thompson/msfvenom-payload.jpg)
 _Creating the malicious WAR file_
 
 ---
@@ -151,7 +151,7 @@ After uploading and deploying the WAR file from Tomcat Manager, the target conne
 
 I now had access to the system and started exploring.
 
-![Reverse Shell Connection](/assets/img/posts/thompson/reverse-shell.png)
+![Reverse Shell Connection](/assets/img/posts/thompson/reverse-shell.jpg)
 _Successfully obtained reverse shell as tomcat user_
 ```bash
 whoami
@@ -178,7 +178,7 @@ I also confirmed my access level and checked system users.
 
 At this point, I noticed something interesting in the system's **cron jobs**.
 
-![System Exploration](/assets/img/posts/thompson/system-exploration.png)
+![System Exploration](/assets/img/posts/thompson/system-exploration.jpg)
 _Exploring the file system_
 
 ---
@@ -206,7 +206,7 @@ ls -la /home/jack/id.sh
 
 This is a **classic cron misconfiguration**.
 
-![Crontab Contents](/assets/img/posts/thompson/crontab-contents.png)
+![Crontab Contents](/assets/img/posts/thompson/crontab-contents.jpg)
 _Discovering the vulnerable cron job_
 
 ---
@@ -239,7 +239,7 @@ id
 
 ✅ **Root access achieved!**
 
-![Root Privilege Escalation](/assets/img/posts/thompson/root-escalation.png)
+![Root Privilege Escalation](/assets/img/posts/thompson/root-escalation.jpg)
 _Successfully escalated to root_
 
 ---
@@ -262,7 +262,7 @@ cat /root/root.txt
 
 Both **user and root flags** were captured successfully! 🎉
 
-![Root Flag](/assets/img/posts/thompson/root-flag.png)
+![Root Flag](/assets/img/posts/thompson/root-flag.jpg)
 _Final proof: root flag captured_
 
 ---
