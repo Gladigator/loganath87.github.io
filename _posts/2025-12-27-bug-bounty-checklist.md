@@ -21,7 +21,7 @@ This checklist provides a complete, step-by-step methodology covering:
 - ✅ **Essential Tools Reference**
 - ✅ **Quick Payloads Library**
 
-Perfect for bug bounty hunters, pentesters, and security researchers who want to ensure thorough coverage of all vulnerability types.
+Perfect for bug bounty hunters, pentesters and security researchers who want to ensure thorough coverage of all vulnerability types.
 
 ---
 
@@ -108,7 +108,7 @@ Systematic testing covering all major vulnerability categories.
 - [ ] Try boolean-based blind SQLi
 - [ ] Test time-based blind SQLi
 - [ ] Use SQLMap for automated testing
-- [ ] Check POST, GET, Cookie, and Header parameters
+- [ ] Check POST, GET, Cookie and Header parameters
 
 ##### Cross-Site Scripting (XSS)
 - [ ] Test reflected XSS: `<script>alert(1)</script>`
@@ -401,7 +401,13 @@ http://localhost
 - [OWASP Top 10](https://owasp.org/www-project-top-ten/)
 - [PortSwigger Web Security Academy](https://portswigger.net/web-security)
 - [HackerOne Disclosure Guidelines](https://www.hackerone.com/disclosure-guidelines)
-- [Bug Bounty Platforms](https://bugbountyplatforms.com/)
+
+### Bug Bounty Platforms
+- [HackerOne](https://www.hackerone.com/) - Leading bug bounty platform
+- [Bugcrowd](https://www.bugcrowd.com/) - Crowdsourced security testing
+- [Intigriti](https://www.intigriti.com/) - European bug bounty platform
+- [YesWeHack](https://www.yeswehack.com/) - Global bug bounty platform
+- [Synack](https://www.synack.com/) - Vetted researcher platform
 
 ---
 
