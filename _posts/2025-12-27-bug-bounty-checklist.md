@@ -3,7 +3,7 @@ title: "Bug Bounty Web Application Testing Checklist - Complete Methodology"
 date: 2025-12-27 12:00:00 +1100
 categories: [Cybersecurity, Bug Bounty]
 tags: [bug-bounty, web-security, penetration-testing, owasp, checklist, methodology]
-pin: true
+pin: false
 image:
   path: /assets/img/bug-bounty-checklist.png
   alt: Bug Bounty Web Application Testing Checklist
