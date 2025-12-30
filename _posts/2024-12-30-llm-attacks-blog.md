@@ -4,14 +4,14 @@ date: 2024-12-30
 categories: [Security, AI, TryHackMe]
 tags: [llm, prompt-injection, ai-security, cybersecurity]
 image:
-  path: /path/to/your/ai-security-header.jpg
+  path: /assets/img/ai-security-header.jpg  
   alt: AI Security Header
 pin: false
 ---
 
 ## So I Basically Gaslit a Robot Today...
 
-Finished a TryHackMe room on attacking AIs today, and holy crap my mind is blown. 🤯
+Finished a TryHackMe room on Input Manipulation & Prompt Injection today and holy crap my mind is blown. 🤯
 
 I didn't hack anything. Didn't write fancy code. Didn't exploit bugs.
 
