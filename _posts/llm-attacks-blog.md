@@ -4,7 +4,7 @@ date: 2024-12-30
 categories: [Security, AI, TryHackMe]
 tags: [llm, prompt-injection, ai-security, cybersecurity]
 image:
-  path: /path/to/your/image.jpg
+  path: /path/to/your/ai-security-header.jpg
   alt: AI Security Header
 pin: false
 ---
