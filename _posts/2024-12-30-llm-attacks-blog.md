@@ -19,7 +19,7 @@ I just **asked nicely**. And the AI spilled everything like we were best friends
 
 Let me explain how this works and why everyone using AI should know about this.
 
-## What is Prompt Injection? (The Simple Version)
+## What is Prompt Injection?
 
 Imagine your company has an AI assistant. Let's call him Jerry. Jerry has secret rules:
 
