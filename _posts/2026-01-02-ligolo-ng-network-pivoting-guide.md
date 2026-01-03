@@ -20,7 +20,7 @@ The tool has two parts. A proxy runs on your attack machine. An agent runs on th
 
 ## Why Not Just Use SSH Tunneling?
 
-Good question. SSH tunneling works fine if you have SSH access. But what if you don't? What if you compromised a Windows machine through a web exploit? What if SSH is blocked or unavailable?
+SSH tunneling works fine if you have SSH access. But what if you don't? What if you compromised a Windows machine through a web exploit? What if SSH is blocked or unavailable?
 
 Ligolo-ng doesn't care how you got access. Web shell, reverse shell, whatever. As long as you can run a binary on the target you're good to go.
 
