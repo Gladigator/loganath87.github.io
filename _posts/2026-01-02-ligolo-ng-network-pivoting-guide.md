@@ -4,7 +4,7 @@ date: 2026-01-02 10:00:00 +0800
 categories: [Tools, Network Pivoting]
 tags: [ligolo, pivoting, tunneling, penetration-testing, network-security]
 image:
-  path: /assets/img/posts/ligolo-ng-header.png
+  path: /assets/img/ligolo-ng-header.png
   alt: Ligolo-ng Network Tunneling Tool
 ---
 
