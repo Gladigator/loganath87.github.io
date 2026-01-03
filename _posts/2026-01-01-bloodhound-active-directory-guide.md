@@ -1,20 +1,13 @@
 ---
 title: "BloodHound: Visualizing Active Directory Attack Paths"
-date: 2026-01-03 12:00:00 +0800
+date: 2026-01-01 12:00:00 +0800
 categories: [Tools, Active Directory]
 tags: [bloodhound, active-directory, pentesting, enumeration, attack-paths]
 image:
-  path: /assets/img/posts/bloodhound-header.png
+  path: /assets/img/bloodhound-header.png
   alt: BloodHound Active Directory Analysis Tool
 ---
 
-Active Directory environments can be complex. Thousands of users. Hundreds of computers. Nested group memberships. Permission relationships going six levels deep. Finding a path from your current access to Domain Admin can feel like solving a maze blindfolded.
-
-BloodHound changes that. It maps the entire Active Directory structure into a graph database. Then it shows you exactly how to get from where you are to where you want to be.
-
-I used BloodHound recently during a lab exercise. The visual representation made complex relationships immediately clear. What would have taken hours of manual enumeration became obvious in seconds.
-
-## What BloodHound Actually Does
 
 BloodHound collects information about Active Directory. User accounts. Computer accounts. Group memberships. Who can log into what. Who has admin rights where. Trust relationships. All of it.
 
@@ -230,8 +223,6 @@ Do this for:
 - Any group you have control over
 
 ## Running Queries
-
-This is where BloodHound shines.
 
 Click the **Analysis** tab (hamburger menu icon, top left).
 
