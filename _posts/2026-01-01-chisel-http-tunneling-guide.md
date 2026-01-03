@@ -1,22 +1,13 @@
 ---
 title: "Chisel: HTTP Tunneling When Stealth Matters"
-date: 2026-01-03 11:00:00 +0800
+date: 2026-01-01 11:00:00 +0800
 categories: [Tools, Network Pivoting]
 tags: [chisel, tunneling, socks-proxy, penetration-testing, http-tunneling]
 image:
-  path: /assets/img/posts/chisel-header.png
+  path: /assets/img/chisel-header.png
   alt: Chisel HTTP Tunneling Tool
 ---
 
-Sometimes you need your network tunnel to look like regular web traffic. Maybe there's a strict firewall. Maybe IDS is monitoring for unusual protocols. That's when Chisel becomes useful.
-
-I learned about Chisel while looking for alternatives to traditional tunneling tools. It takes a different approach. Instead of creating a network interface it tunnels everything over HTTP. To a firewall it just looks like someone browsing websites.
-
-## What Makes Chisel Different?
-
-Most tunneling tools create virtual network interfaces or use protocols like SSH. Chisel wraps everything in HTTP. The client connects to the server using what looks like a normal web connection. Inside that connection it tunnels TCP traffic using SOCKS proxy or port forwarding.
-
-This has real advantages when you're dealing with strict network controls. HTTP traffic is usually allowed. Firewalls expect it. It doesn't raise immediate red flags.
 
 ## Installing Chisel
 
