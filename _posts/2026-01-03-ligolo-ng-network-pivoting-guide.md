@@ -309,17 +309,6 @@ You'll need multiple terminals running. Here's how I organize them:
 
 Don't close terminals 1 and 2. They need to stay running for the tunnel to work.
 
-## Why I Like Ligolo-ng
-
-After using it in a real scenario here's what stood out:
-
-**Speed**: It's fast. No noticeable lag even through multiple hops.
-
-**Simplicity**: Once set up you forget it's there. No proxychains configuration. No SOCKS proxy. Tools just work.
-
-**Reliability**: It doesn't drop connections randomly. The tunnel stays up.
-
-**Cross-platform**: Works on Linux and Windows targets. I only tested Linux but good to know.
 
 ## When to Use Something Else
 
