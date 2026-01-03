@@ -1,6 +1,6 @@
 ---
 title: "Ligolo-ng: Simple Network Pivoting for Pentesters"
-date: 2026-01-03 10:00:00 +0800
+date: 2026-01-02 10:00:00 +0800
 categories: [Tools, Network Pivoting]
 tags: [ligolo, pivoting, tunneling, penetration-testing, network-security]
 image:
