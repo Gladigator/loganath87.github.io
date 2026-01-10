@@ -4,7 +4,7 @@ date: 2026-01-09 15:30:00 +1100
 categories: [TryHackMe, HTB]
 tags: [penetration-testing, active-directory, asreproasting, bloodhound, lsass, sebackupprivilege, windows]
 image:
-  path: /assets/img/blackfield-header.jpg
+  path: /assets/img/blackfield-header.png
   alt: Blackfield HTB Machine
 ---
 
