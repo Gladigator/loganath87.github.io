@@ -1,6 +1,6 @@
 ---
 title: "Resolute - HackTheBox Walkthrough"
-date: 2026-01-11 13:30:00 +1100
+date: 2026-01-10 13:30:00 +1100
 categories: [TryHackMe, HTB]
 tags: [active-directory, bloodhound, pentesting, windows, dnsadmins]
 image:
@@ -29,7 +29,7 @@ Started with a full port scan to identify running services.
 nmap -A -v 10.129.96.155
 ```
 
-The scan revealed this was a Windows Domain Controller with multiple services exposed including LDAP (389), WinRM (5985), and DNS (53).
+The scan revealed this was a Windows Domain Controller with multiple services exposed including LDAP (389), WinRM (5985) and DNS (53).
 
 ## Enumeration
 
@@ -113,14 +113,14 @@ dir -force
 type PowerShell_transcript.RESOLUTE.OJuoBGhU.20191203063201.txt
 ```
 
-The transcript revealed credentials for user `ryan` in a `net use` command that had been logged: `ryan:Serv3r4Admin4cc123!`
+The transcript revealed credentials for user `ryan` in a `net use` command that had been logged: `ryan:Secvxr4xdmxn4cc123!`
 
 ### Accessing Ryan's Account
 
 Logged in as ryan using the discovered credentials.
 
 ```bash
-evil-winrm -i 10.129.96.155 -u ryan -p 'Serv3r4Admin4cc123!'
+evil-winrm -i 10.129.96.155 -u ryan -p 'Secv3x4Axminxcc123!'
 ```
 
 Checked ryan's group memberships.
