@@ -4,7 +4,7 @@ date: 2026-01-11 13:30:00 +1100
 categories: [TryHackMe, HTB]
 tags: [active-directory, bloodhound, pentesting, windows, dnsadmins]
 image:
-  path: /assets/img/posts/resolute-banner.jpg
+  path: /assets/img/resolute-banner.png
   alt: Resolute HackTheBox Machine
 ---
 
