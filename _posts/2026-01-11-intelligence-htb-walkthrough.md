@@ -1,14 +1,14 @@
 ---
 title: "Intelligence - HackTheBox Walkthrough"
-date: 2026-01-13 10:30:00 +1100
+date: 2026-01-11 10:30:00 +1100
 categories: [TryHackMe, HTB]
 tags: [active-directory, windows, pentesting, bloodhound, password-spraying, gmsa, constrained-delegation]
 image:
-  path: /assets/img/posts/intelligence-htb.png
+  path: /assets/img/intelligence-htb.png
   alt: Intelligence HackTheBox Machine
 ---
 
-Intelligence is a medium-difficulty Windows machine from HackTheBox that focuses on Active Directory exploitation. This box teaches you about PDF metadata analysis, password spraying, ADIDNS poisoning, GMSA password dumping, and constrained delegation abuse.
+Intelligence is a medium-difficulty Windows machine from HackTheBox that focuses on Active Directory exploitation. This box teaches you about PDF metadata analysis, password spraying, ADIDNS poisoning, GMSA password dumping and constrained delegation abuse.
 
 ## Initial Enumeration
 
@@ -18,7 +18,7 @@ I started with a quick port scan to see what services were running on the target
 nmap -p- --min-rate=1000 -T4 10.129.34.158
 ```
 
-The scan revealed this was clearly a Windows Domain Controller with services like DNS (53), HTTP (80), Kerberos (88), LDAP (389), and SMB (445) all running. 
+The scan revealed this was clearly a Windows Domain Controller with services like DNS (53), HTTP (80), Kerberos (88), LDAP (389) and SMB (445) all running. 
 
 Running a more detailed scan on these ports confirmed the domain name: **intelligence.htb**
 
@@ -57,7 +57,7 @@ PDFs often contain useful metadata, especially the Creator field which typically
 exiftool -Creator -csv *.pdf | cut -d, -f2 | sort | uniq > ../userlist.txt
 ```
 
-This gave me a nice list of potential Active Directory usernames like Tiffany.Molina, Ted.Graves, Jose.Williams, and many others.
+This gave me a nice list of potential Active Directory usernames like Tiffany.Molina, Ted.Graves, Jose.Williams and many others.
 
 Next, I converted all PDFs to text to read their contents.
 
@@ -111,7 +111,7 @@ This was exploitable through DNS poisoning.
 
 ## DNS Poisoning Attack
 
-I could add my own DNS record pointing to my machine, wait for the script to run, and capture Ted's credentials.
+I could add my own DNS record pointing to my machine, wait for the script to run and capture Ted's credentials.
 
 ```bash
 git clone https://github.com/dirkjanm/krbrelayx
@@ -160,7 +160,7 @@ After uploading the JSON files and searching for Ted.Graves, the "Shortest Paths
 
 ## Reading the GMSA Password
 
-Group Managed Service Accounts (GMSA) store their passwords in Active Directory, and certain users can read them. Ted had this permission.
+Group Managed Service Accounts (GMSA) store their passwords in Active Directory and certain users can read them. Ted had this permission.
 
 ```bash
 git clone https://github.com/micahvandeusen/gMSADumper
