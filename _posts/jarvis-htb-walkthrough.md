@@ -4,11 +4,11 @@ date: 2026-01-29 12:00:00 +1100
 categories: [HackTheBox, Linux]
 tags: [htb, pentesting, sql-injection, command-injection, privilege-escalation, systemctl]
 image:
-  path: /assets/img/posts/jarvis-header.jpg
+  path: /assets/img/posts/jarvis-header.png
   alt: "Jarvis HTB Machine"
 ---
 
-Jarvis is a medium-difficulty Linux machine from HackTheBox. We'll exploit SQL injection to get a foothold, use command injection for lateral movement, and leverage a misconfigured SUID binary to get root.
+Jarvis is a medium-difficulty Linux machine from HackTheBox. We'll exploit SQL injection to get a foothold, use command injection for lateral movement and leverage a misconfigured SUID binary to get root.
 
 ## Initial Recon
 
@@ -18,7 +18,7 @@ Started with a port scan to see what's open:
 nmap -p- --min-rate=1000 -T4 10.129.229.137
 ```
 
-Found three open ports: **22 (SSH)**, **80 (HTTP)**, and **64999 (HTTP)**. Let's get more details:
+Found three open ports: **22 (SSH)**, **80 (HTTP)** and **64999 (HTTP)**. Let's get more details:
 
 ```bash
 nmap -sC -sV -p 22,80,64999 10.129.229.137
@@ -68,7 +68,7 @@ So there are **7 columns**. Now let's see which ones display on the page:
 http://10.129.229.137/room.php?cod=-1 union select 1,2,3,4,5,6,7
 ```
 
-The page shows numbers **2, 4, and 5**. Perfect! We can use these positions to extract data.
+The page shows numbers **2, 4 and 5**. Perfect! We can use these positions to extract data.
 
 ### Extracting Info
 
