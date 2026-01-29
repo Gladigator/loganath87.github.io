@@ -1,6 +1,6 @@
 ---
 title: "Jarvis - HackTheBox Walkthrough"
-date: 2026-01-29 12:00:00 +1100
+date: 2026-01-28 12:00:00 +1100
 categories: [HackTheBox, Linux]
 tags: [htb, pentesting, sql-injection, command-injection, privilege-escalation, systemctl]
 image:
