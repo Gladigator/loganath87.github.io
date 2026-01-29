@@ -4,7 +4,7 @@ date: 2026-01-29 12:00:00 +1100
 categories: [HackTheBox, Linux]
 tags: [htb, pentesting, sql-injection, command-injection, privilege-escalation, systemctl]
 image:
-  path: /assets/img/posts/jarvis-header.png
+  path: /assets/img/jarvis-header.png
   alt: "Jarvis HTB Machine"
 ---
 
