@@ -1,14 +1,14 @@
 ---
 title: Backend - HackTheBox Walkthrough
-date: 2026-02-09 14:30:00 +1100
+date: 2026-02-07 14:30:00 +1100
 categories: [HackTheBox, Linux]
 tags: [pentesting, api, jwt, fastapi, web-security]
 image:
-  path: /assets/img/posts/backend-htb.jpg
+  path: /assets/img/backend-htb.png
   alt: Backend HackTheBox Machine
 ---
 
-Backend is a medium-difficulty Linux machine from HackTheBox that teaches you how to exploit API vulnerabilities. The box doesn't have a traditional website frontend, just a backend API. We'll fuzz API endpoints, manipulate JWT tokens, abuse debug features, and escalate to root by finding credentials in log files.
+Backend is a medium-difficulty Linux machine from HackTheBox that teaches you how to exploit API vulnerabilities. The box doesn't have a traditional website frontend, just a backend API. We'll fuzz API endpoints, manipulate JWT tokens, abuse debug features and escalate to root by finding credentials in log files.
 
 ## Initial Enumeration
 
